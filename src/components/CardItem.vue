@@ -5,7 +5,10 @@ const store = useStore()
 defineProps(['title'])
 </script>
 <template>
-  <div class="rounded p-5" :class="[store.secondaryBgColor, store.secondaryColor]">
+  <div
+    class="rounded p-5 dark:bg-transparent"
+    :class="[store.secondaryBgColor, store.secondaryColor]"
+  >
     <slot></slot>
   </div>
 </template>

@@ -9,8 +9,8 @@ const store = useStore()
   <Card title="Skills">
     <slot>
       <div v-for="(skill, key) in store.skills" :key="key">
-        <CardItem class="mb-2">
-          <div class="divide-y divide-slate-300">
+        <CardItem class="mb-2 dark:text-slate-400">
+          <div class="divide-y divide-slate-300 dark:divide-slate-400">
             <div class="pb-2">
               <p>{{ key }}</p>
             </div>

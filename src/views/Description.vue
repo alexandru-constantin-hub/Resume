@@ -28,10 +28,10 @@ const backgroundImage = codeImage
       />
     </div>
     <div class="m-5">
-      <h1 class="text-lg bold">Alexandru Constantin</h1>
-      <p>Front End Developer</p>
+      <h1 class="text-lg bold dark:text-gray-300">Alexandru Constantin</h1>
+      <p class="dark:text-slate-400">Front End Developer</p>
     </div>
-    <CardItem class="m-2">
+    <CardItem class="m-2 dark:text-slate-500">
       <p>
         Committed to continuous learning and professional development, actively seeking
         opportunities to enhance skills and knowledge base. Demonstrated ability to adapt to new

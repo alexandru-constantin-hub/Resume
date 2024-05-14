@@ -6,8 +6,8 @@ import CardItem from '../components/CardItem.vue'
   <div title="About me">
     <slot>
       <Card title="About me">
-        <CardItem class="divide-y divide-slate-300">
-          <div class="text pb-4">
+        <CardItem class="divide-y divide-slate-300 dark:divide-slate-500 dark:text-slate-400">
+          <div class="text pb-4 dark:text-slate-500">
             Front-End Developer with three years of experience, dedicated to creating user-friendly
             interfaces and functional web applications. Skilled in Angular, React, and Vue
             frameworks, I enjoy designing UIs that prioritize simplicity and usability.
