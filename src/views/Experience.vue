@@ -12,13 +12,16 @@ const firstLetterCompanyName = (company) => {
 }
 
 const companyColor = (company) => {
-  if (company === 'GeraldGodin') {
-    return 'bg-blue-500'
+  if (company === 'Flyscan') {
+    return 'bg-purple-500'
   }
-  if (company === 'Vanier') {
+  if (company === 'Zmartests') {
+    return 'bg-green-500'
+  }
+  if (company === 'Nixa') {
     return 'bg-red-500'
   }
-  return 'bg-teal-500'
+  return 'bg-red-600'
 }
 
 const store = useStore()
@@ -37,7 +40,7 @@ const store = useStore()
           </div>
           <div class="w-11/12 pl-3">
             <div class="flex justify-between">
-              <h3 class="font-bold">{{ company.title }}</h3>
+              <h2 class="font-bold">{{ company.title }}</h2>
               <Badge :text="company.type" />
             </div>
             <div class="flex items-center gap-x-4 flex-wrap">

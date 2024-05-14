@@ -15,7 +15,7 @@ const store = useStore()
               <p>{{ key }}</p>
             </div>
             <div v-for="(item, key) in skill" :key="key" class="py-2 flex justify-between">
-              <p>{{ key }}</p>
+              <p class="pl-4">{{ key }}</p>
               <p>{{ item.experience }}</p>
             </div>
           </div>

@@ -34,7 +34,7 @@ const schoolColor = (school) => {
           </div>
         </div>
         <div class="w-11/12 pl-3">
-          <h3 class="font-bold">{{ education.title }}</h3>
+          <h2 class="font-bold">{{ education.title }}</h2>
           <div class="flex items-center gap-x-4 flex-wrap">
             <div class="flex">
               <School :width="15" :height="15" class="mt-1 mr-1 fill-slate-600" />
