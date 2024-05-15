@@ -11,27 +11,24 @@ import Projects from './views/Projects.vue'
 const active = ref('Resume')
 
 const isActive = (value) => {
-  console.log(value)
   return (active.value = value)
 }
 </script>
 
 <template>
-  <header>
-    <div class="container mx-auto px-8 py-2 flex flex-wrap justify-between">
-      <div class="w-full lg:basis-[40%] flex flex-col gap-y-4">
-        <Description />
-        <AboutMe />
-        <Skills />
-      </div>
-      <div class="w-full lg:basis-[58%] flex flex-col gap-y-4">
-        <nav>
-          <Navigation @sectionActive="isActive" />
-        </nav>
-        <Experience v-if="active === 'Resume'" />
-        <Education v-if="active === 'Resume'" />
-        <Projects v-if="active === 'Projects'" />
-      </div>
+  <div class="container mx-auto px-8 py-2 flex flex-wrap justify-between">
+    <div class="w-full lg:basis-[40%] flex flex-col gap-y-4">
+      <Description />
+      <AboutMe />
+      <Skills />
     </div>
-  </header>
+    <div class="w-full lg:basis-[58%] flex flex-col gap-y-4">
+      <nav>
+        <Navigation @sectionActive="isActive" />
+      </nav>
+      <Experience v-if="active === 'Resume'" />
+      <Education v-if="active === 'Resume'" />
+      <Projects v-if="active === 'Projects'" />
+    </div>
+  </div>
 </template>

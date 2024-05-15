@@ -7,6 +7,7 @@ export const useStore = defineStore('mainStore', {
       secondaryBgColor: 'bg-gray-50',
       primaryColor: 'text-blue-600',
       secondaryColor: 'text-slate-500',
+      currentTheme: 'auto',
       companies: [
         {
           name: 'Flyscan',
@@ -150,6 +151,22 @@ export const useStore = defineStore('mainStore', {
           place: 'Iasi, Roumania'
         }
       ]
+    }
+  },
+  actions: {
+    changeTheme() {
+      const htmlClasses = document.querySelector('html').classList
+
+      if (this.currentTheme === 'auto') {
+        this.currentTheme = 'dark'
+        htmlClasses.add('dark')
+      } else if (this.currentTheme === 'dark') {
+        this.currentTheme = 'light'
+        htmlClasses.remove('dark')
+      } else {
+        this.currentTheme = 'auto'
+        htmlClasses.remove('dark')
+      }
     }
   }
 })
