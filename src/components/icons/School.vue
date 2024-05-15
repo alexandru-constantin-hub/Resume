@@ -1,12 +1,12 @@
 <script setup>
-defineProps(['height', 'width', 'color'])
+defineProps(['height', 'width', 'currentColor'])
 </script>
 <template>
   <svg
     xmlns="http://www.w3.org/2000/svg"
     :height="height"
     :width="width"
-    :fill="color"
+    :fill="currentColor"
     viewBox="0 -960 960 960"
   >
     <path

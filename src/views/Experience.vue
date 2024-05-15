@@ -13,15 +13,15 @@ const firstLetterCompanyName = (company) => {
 
 const companyColor = (company) => {
   if (company === 'Flyscan') {
-    return 'bg-purple-500 dark:bg-slate-700'
+    return 'bg-purple-500 dark:bg-slate-700 text-white dark:text-slate-500'
   }
   if (company === 'Zmartests') {
-    return 'bg-green-500 dark:bg-slate-700'
+    return 'bg-green-500 dark:bg-slate-700 text-white dark:text-slate-500'
   }
   if (company === 'Nixa') {
-    return 'bg-red-500 dark:bg-slate-700'
+    return 'bg-red-500 dark:bg-slate-700 text-white dark:text-slate-500'
   }
-  return 'bg-red-600 dark:bg-slate-700'
+  return 'bg-red-600 dark:bg-slate-700 text-white dark:text-slate-500'
 }
 
 const store = useStore()

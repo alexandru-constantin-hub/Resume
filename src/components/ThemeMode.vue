@@ -4,7 +4,7 @@ import LightMode from './icons/LightMode.vue'
 defineProps(['theme'])
 </script>
 <template>
-  <div>
+  <div class="mt-1">
     <button v-if="theme === 'light'">
       <DarkMode :width="25" :height="25" />
     </button>

@@ -1,10 +1,19 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
+import { ref } from 'vue'
 import AboutMe from './views/AboutMe.vue'
 import Skills from './views/Skills.vue'
 import Description from './views/Description.vue'
 import Education from './views/Education.vue'
+import Navigation from './components/Navigation.vue'
 import Experience from './views/Experience.vue'
+import Projects from './views/Projects.vue'
+
+const active = ref('Resume')
+
+const isActive = (value) => {
+  console.log(value)
+  return (active.value = value)
+}
 </script>
 
 <template>
@@ -16,8 +25,12 @@ import Experience from './views/Experience.vue'
         <Skills />
       </div>
       <div class="w-full lg:basis-[58%] flex flex-col gap-y-4">
-        <Experience />
-        <Education />
+        <nav>
+          <Navigation @sectionActive="isActive" />
+        </nav>
+        <Experience v-if="active === 'Resume'" />
+        <Education v-if="active === 'Resume'" />
+        <Projects v-if="active === 'Projects'" />
       </div>
     </div>
   </header>

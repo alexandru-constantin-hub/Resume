@@ -1,5 +1,5 @@
 <script setup>
-defineProps(['height', 'width', 'colorColor'])
+defineProps(['height', 'width', 'currentColor'])
 </script>
 <template>
   <svg

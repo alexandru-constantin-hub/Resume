@@ -5,20 +5,28 @@ const store = useStore()
 
 const props = defineProps(['long', 'active'])
 
-const emit = defineEmits(['click'])
+const emit = defineEmits(['clicked'])
 
 const active = computed(() => {
   if (props.active) {
-    return 'bg-gray-50' + ' ' + store.primaryColor
+    return 'bg-gray-50' + ' ' + store.primaryColor + ' ' + 'dark:bg-slate-700 dark:text-slate-300'
   }
-  return 'hover:' + store.secondaryBgColor + ' ' + 'hover:' + store.primaryColor
+  return (
+    'hover:' +
+    store.secondaryBgColor +
+    ' ' +
+    'hover:' +
+    store.primaryColor +
+    ' ' +
+    'dark:hover:bg-slate-700 dark:text-slate-300'
+  )
 })
 </script>
 <template>
   <button
     class="rounded py-2"
     :class="[active, props.long ? 'w-full' : 'px-4']"
-    @click.stop="emit('click')"
+    @click.stop="emit('clicked')"
   >
     <slot></slot>
   </button>

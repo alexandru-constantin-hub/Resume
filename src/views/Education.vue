@@ -14,12 +14,12 @@ const firstLetterSchoolName = (school) => {
 
 const schoolColor = (school) => {
   if (school === 'GeraldGodin') {
-    return 'bg-blue-500 dark:bg-slate-700'
+    return 'bg-blue-500 dark:bg-slate-700 text-white dark:text-slate-500'
   }
   if (school === 'Vanier') {
-    return 'bg-red-500 dark:bg-slate-700'
+    return 'bg-red-500 dark:bg-slate-700 text-white dark:text-slate-500'
   }
-  return 'bg-teal-500 dark:bg-slate-700'
+  return 'bg-teal-500 dark:bg-slate-700 text-white dark:text-slate-500'
 }
 </script>
 <template>
