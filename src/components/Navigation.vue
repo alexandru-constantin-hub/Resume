@@ -17,18 +17,22 @@ const changeActive = (value) => {
 }
 </script>
 <template>
-  <Card>
-    <div class="flex justify-between items-center gap-3">
-      <Button long="true" :active="isActive('Resume')" @clicked="changeActive('Resume')"
-        >Resume</Button
-      >
-      <Button long="true" :active="isActive('Projects')" @clicked="changeActive('Projects')"
-        >Projects</Button
-      >
-      <div class="flex">
-        <div class="border-l border-slate-200 m-3"></div>
-        <ThemeMode theme="dark" class="p-2 fill-slate-500" />
-      </div>
-    </div>
-  </Card>
+  <header>
+    <nav>
+      <Card>
+        <div class="flex justify-between items-center gap-3">
+          <Button long="true" :active="isActive('Resume')" @clicked="changeActive('Resume')"
+            >Resume</Button
+          >
+          <Button long="true" :active="isActive('Projects')" @clicked="changeActive('Projects')"
+            >Projects</Button
+          >
+          <div class="flex">
+            <div class="border-l border-slate-200 pr-3"></div>
+            <ThemeMode />
+          </div>
+        </div>
+      </Card>
+    </nav>
+  </header>
 </template>

@@ -3,11 +3,11 @@ import { defineStore } from 'pinia'
 export const useStore = defineStore('mainStore', {
   state: () => {
     return {
+      currentTheme: 'auto',
       primaryBgColor: 'bg-blue-600',
       secondaryBgColor: 'bg-gray-50',
       primaryColor: 'text-blue-600',
       secondaryColor: 'text-slate-500',
-      currentTheme: 'auto',
       companies: [
         {
           name: 'Flyscan',
@@ -154,19 +154,32 @@ export const useStore = defineStore('mainStore', {
     }
   },
   actions: {
-    changeTheme() {
+    changeTheme(theme) {
+      this.currentTheme = theme
       const htmlClasses = document.querySelector('html').classList
 
-      if (this.currentTheme === 'auto') {
-        this.currentTheme = 'dark'
-        htmlClasses.add('dark')
-      } else if (this.currentTheme === 'dark') {
-        this.currentTheme = 'light'
-        htmlClasses.remove('dark')
-      } else {
-        this.currentTheme = 'auto'
+      if (theme === 'auto') {
+        localStorage.removeItem('theme')
         htmlClasses.remove('dark')
       }
+
+      if (this.currentTheme === 'dark') {
+        localStorage.theme = 'dark'
+        htmlClasses.add('dark')
+      }
+
+      if (this.currentTheme === 'light') {
+        localStorage.theme = 'light'
+        htmlClasses.remove('dark')
+      }
+    },
+    getTheme() {
+      const currentTheme = localStorage.theme || 'auto'
+      const htmlClasses = document.querySelector('html').classList
+      if (currentTheme === 'dark') {
+        htmlClasses.add('dark')
+      }
+      return (this.currentTheme = currentTheme)
     }
   }
 })
