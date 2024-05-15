@@ -2,9 +2,12 @@
 import Card from '../components/Card.vue'
 import CardItem from '../components/CardItem.vue'
 import Badge from '../components/Badge.vue'
+import Button from '../components/Button.vue'
+import Download from '../components/icons/Download.vue'
 
 import codeImage from '@/assets/code.jpg'
 import me from '@/assets/me.jpeg'
+import resume from '@/assets/Alexandru_Constantin_Resume_EN.pdf'
 
 import { useStore } from '../mainStore'
 const store = useStore()
@@ -46,6 +49,11 @@ const backgroundImage = codeImage
           class="mr-1 mb-1"
         />
       </div>
+      <a :href="resume" download="Alexandru_Constantin_Resume_EN.pdf">
+        <Button long="true" class="mt-4 text-white fill-white" :class="store.primaryBgColor"
+          ><span>Download CV</span> <Download :with="20" :height="20" class="inline-block ml-2" />
+        </Button>
+      </a>
     </CardItem>
   </Card>
 </template>

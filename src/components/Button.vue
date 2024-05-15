@@ -24,8 +24,8 @@ const active = computed(() => {
 </script>
 <template>
   <button
-    class="rounded py-2"
-    :class="[active, props.long ? 'w-full' : 'px-4']"
+    class="rounded py-3"
+    :class="[active, props.long ? 'w-full' : 'px-6']"
     @click.stop="emit('clicked')"
   >
     <slot></slot>
