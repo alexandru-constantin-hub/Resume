@@ -21,21 +21,24 @@ const changeTheme = (theme) => {
 }
 </script>
 <template>
-  <button v-if="!displayAllButtons" title="Change theme" class="fill-slate-500 dark:fill-slate-300">
-    <AutoMode :width="25" :height="25" @click.prevent="toggleDisplay" />
-  </button>
-  <div
-    class="mt-1 gap-2 fill-slate-500 dark:fill-slate-300"
-    :class="displayAllButtons ? 'flex' : 'hidden'"
-  >
-    <button @click.prevent="changeTheme('dark')" title="Dark theme">
-      <DarkMode :width="25" :height="25" />
+  <Transition name="fade" mode="out-in">
+    <button
+      v-if="!displayAllButtons"
+      title="Change theme"
+      class="fill-slate-500 dark:fill-slate-300"
+    >
+      <AutoMode :width="25" :height="25" @click.prevent="toggleDisplay" />
     </button>
-    <button @click.prevent="changeTheme('light')" title="Light theme">
-      <LightMode :width="25" :height="25" />
-    </button>
-    <button @click.prevent="changeTheme('auto')" title="Auto theme">
-      <AutoMode :width="25" :height="25" />
-    </button>
-  </div>
+    <div v-else class="flex mt-1 gap-2 fill-slate-500 dark:fill-slate-300">
+      <button @click.prevent="changeTheme('dark')" title="Dark theme">
+        <DarkMode :width="25" :height="25" />
+      </button>
+      <button @click.prevent="changeTheme('light')" title="Light theme">
+        <LightMode :width="25" :height="25" />
+      </button>
+      <button @click.prevent="changeTheme('auto')" title="Auto theme">
+        <AutoMode :width="25" :height="25" />
+      </button>
+    </div>
+  </Transition>
 </template>
