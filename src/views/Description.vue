@@ -16,7 +16,7 @@ const backgroundImage = codeImage
     <div class="relative">
       <div class="relative">
         <div
-          class="bg-cover bg-center w-full h-52 no-repeat rounded-t-lg before:content-[''] before:absolute before:inset-0 before:block before:bg-gradient-to-b before:to-white/100 before:z-10 before:rounded-t-lg"
+          class="bg-cover bg-center w-full h-52 no-repeat rounded-t-lg before:content-[''] before:absolute before:inset-0 before:block before:bg-gradient-to-b before:to-white/100 before:dark:to-slate-800 before:z-10 before:rounded-t-lg"
           :class="[store.primaryBgColor, 'before:from-blue-600/30']"
           :style="{ backgroundImage: `url(${backgroundImage})` }"
         ></div>

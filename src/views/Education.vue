@@ -14,12 +14,12 @@ const firstLetterSchoolName = (school) => {
 
 const schoolColor = (school) => {
   if (school === 'GeraldGodin') {
-    return 'bg-blue-500'
+    return 'bg-blue-500 dark:bg-slate-700'
   }
   if (school === 'Vanier') {
-    return 'bg-red-500'
+    return 'bg-red-500 dark:bg-slate-700'
   }
-  return 'bg-teal-500'
+  return 'bg-teal-500 dark:bg-slate-700'
 }
 </script>
 <template>
@@ -28,13 +28,13 @@ const schoolColor = (school) => {
       <div class="flex flex-wrap">
         <div class="w-1/12">
           <div class="w-12 rounded-full m-auto" :class="schoolColor(education.icon)">
-            <p class="text-center text-2xl font-semibold p-2 text-white">
+            <p class="text-center text-2xl font-semibold p-2">
               {{ firstLetterSchoolName(education.school) }}
             </p>
           </div>
         </div>
         <div class="w-11/12 pl-3">
-          <h2 class="font-bold">{{ education.title }}</h2>
+          <h2 class="font-bold dark:text-slate-300">{{ education.title }}</h2>
           <div class="flex items-center gap-x-4 flex-wrap">
             <div class="flex">
               <School :width="15" :height="15" class="mt-1 mr-1 fill-slate-600" />
