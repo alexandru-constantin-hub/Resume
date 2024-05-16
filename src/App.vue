@@ -26,8 +26,8 @@ onMounted(() => {
     <div class="w-full lg:basis-[40%] flex flex-col gap-y-4">
       <Description />
       <Navigation @sectionActive="isActive" class="block lg:hidden" />
-      <AboutMe v-if="active === 'Resume'" />
-      <Skills v-if="active === 'Resume'" />
+      <AboutMe :class="active === 'Resume' ? 'block' : 'hidden lg:block'" />
+      <Skills :class="active === 'Resume' ? 'block' : 'hidden lg:block'" />
     </div>
     <div class="w-full lg:basis-[58%] flex flex-col gap-y-4 relative">
       <Navigation @sectionActive="isActive" class="hidden lg:block" />
