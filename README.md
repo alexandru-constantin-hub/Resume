@@ -1,4 +1,12 @@
-# Resume
+# This is my Resume
+
+Technology Stack:
+
+- Vue
+- Pinia
+- Tailwind
+
+# Template
 
 This template should help get you started developing with Vue 3 in Vite.
 
