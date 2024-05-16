@@ -31,14 +31,14 @@ const companyColor = (company) => {
     <Card title="Experience">
       <CardItem class="mb-2" v-for="company in store.companies" :key="company.name">
         <div class="flex flex-wrap">
-          <div class="w-1/12">
+          <div class="hidden md:w-1/12 md:block">
             <div class="w-12 rounded-full m-auto" :class="companyColor(company.icon)">
               <p class="text-center text-2xl font-semibold p-2">
                 {{ firstLetterCompanyName(company.name) }}
               </p>
             </div>
           </div>
-          <div class="w-11/12 pl-3">
+          <div class="w-12/12 md:w-11/12 pl-3">
             <div class="flex justify-between">
               <h2 class="font-bold dark:text-slate-300">{{ company.title }}</h2>
               <Badge :text="company.type" />

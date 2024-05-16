@@ -26,14 +26,14 @@ const schoolColor = (school) => {
   <Card title="Education">
     <CardItem class="mb-2" v-for="education in store.education" :key="education.title">
       <div class="flex flex-wrap">
-        <div class="w-1/12">
+        <div class="hidden md:w-1/12 md:block">
           <div class="w-12 rounded-full m-auto" :class="schoolColor(education.icon)">
             <p class="text-center text-2xl font-semibold p-2">
               {{ firstLetterSchoolName(education.school) }}
             </p>
           </div>
         </div>
-        <div class="w-11/12 pl-3">
+        <div class="w-12/12 md:w-11/12 pl-3">
           <h2 class="font-bold dark:text-slate-300">{{ education.title }}</h2>
           <div class="flex items-center gap-x-4 flex-wrap">
             <div class="flex">
