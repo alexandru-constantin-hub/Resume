@@ -63,7 +63,16 @@ export const useStore = defineStore('mainStore', {
           techStack: ['Angular', 'Bootstrap', 'Kendo UI', 'JQuery']
         }
       ],
-      projects: [],
+      projects: [
+        {
+          name: 'Resume',
+          description: 'The purpose of this project is to create a resume using Vue 3 and Tailwind',
+          date: 'May 2024',
+          gitHubLink: 'https://github.com/alexandru-constantin-hub/Resume',
+          status: 'Finished',
+          techStack: ['Vue', 'Pinia', 'Tailwind']
+        }
+      ],
       technologies: ['Angular', 'Vue', 'React', 'Laravel', '.Net / Blazor', 'Javascript'],
       skills: {
         'Front End Frameworks': {

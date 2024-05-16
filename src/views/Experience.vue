@@ -7,6 +7,8 @@ import Period from '../components/icons/Period.vue'
 import Company from '../components/icons/Company.vue'
 import { useStore } from '../mainStore'
 
+const store = useStore()
+
 const firstLetterCompanyName = (company) => {
   return company.charAt(0).toUpperCase()
 }
@@ -23,8 +25,6 @@ const companyColor = (company) => {
   }
   return 'bg-red-600 dark:bg-slate-700 text-white dark:text-slate-500'
 }
-
-const store = useStore()
 </script>
 <template>
   <div>
