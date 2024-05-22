@@ -66,7 +66,8 @@ export const useStore = defineStore('mainStore', {
       projects: [
         {
           name: 'Resume',
-          description: 'The purpose of this project is to create a resume using Vue 3 and Tailwind',
+          description:
+            'The purpose of this project is to create a resume using Vue 3 and Tailwind. I used Pinia for state management, GitHub actions for CI/CD and Vite for the build process.',
           date: 'May 2024',
           gitHubLink: 'https://github.com/alexandru-constantin-hub/Resume',
           status: 'Finished',
