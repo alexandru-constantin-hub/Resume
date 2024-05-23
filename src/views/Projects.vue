@@ -22,7 +22,7 @@ const store = useStore()
         </div>
         <div class="flex">
           <GitHub :width="15" :height="15" class="mt-1 mr-1 fill-slate-600" />
-          <a :href="project.gitHubLink" target="_blank">Link</a>
+          <a :href="project.gitHubLink" target="_blank">The source code</a>
         </div>
       </div>
       <div class="my-2">

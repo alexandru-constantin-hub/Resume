@@ -72,6 +72,24 @@ export const useStore = defineStore('mainStore', {
           gitHubLink: 'https://github.com/alexandru-constantin-hub/Resume',
           status: 'Finished',
           techStack: ['Vue', 'Pinia', 'Tailwind']
+        },
+        {
+          name: 'Renovation',
+          description:
+            'The aim of this project is to put together services providers and clients. The project is developed in ASP.NET.',
+          date: 'September 2023',
+          gitHubLink: 'hhttps://github.com/alexandru-constantin-hub/renovation',
+          status: 'Finished',
+          techStack: ['ASP.net']
+        },
+        {
+          name: 'Simple calculator',
+          description:
+            'TA project made in JAVA. The calculator can do basic operations like addition, subtraction, multiplication, division, square root, and percentage.',
+          date: 'February 2019',
+          gitHubLink: 'hhttps://github.com/alexandru-constantin-hub/renovation',
+          status: 'Finished',
+          techStack: ['Java']
         }
       ],
       technologies: ['Angular', 'Vue', 'React', 'Laravel', '.Net / Blazor', 'Javascript'],
