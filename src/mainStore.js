@@ -65,6 +65,15 @@ export const useStore = defineStore('mainStore', {
       ],
       projects: [
         {
+          name: 'Tic Tac Toe',
+          description:
+            'Create a react project that allows two players to play Tic Tac Toe. The project is developed using React and Tailwind.',
+          date: 'June 2024',
+          gitHubLink: 'https://github.com/alexandru-constantin-hub/TicTacToe',
+          status: 'Finished',
+          techStack: ['React', 'Tailwind', 'Vite']
+        },
+        {
           name: 'CMS',
           description:
             'The purpose of this project is to create a CMS flexible, modern and secured.',
