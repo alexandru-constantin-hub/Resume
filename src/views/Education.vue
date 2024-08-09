@@ -7,38 +7,24 @@ import Period from '../components/icons/Period.vue'
 import { useStore } from '../mainStore'
 
 const store = useStore()
-
-const firstLetterSchoolName = (school) => {
-  return school.charAt(0).toUpperCase()
-}
-
-const schoolColor = (school) => {
-  if (school === 'GeraldGodin') {
-    return 'bg-blue-500 dark:bg-slate-700 text-white dark:text-slate-500'
-  }
-  if (school === 'Vanier') {
-    return 'bg-red-500 dark:bg-slate-700 text-white dark:text-slate-500'
-  }
-  return 'bg-teal-500 dark:bg-slate-700 text-white dark:text-slate-500'
-}
 </script>
 <template>
   <Card title="Education">
     <CardItem class="mb-2" v-for="education in store.education" :key="education.title">
       <div class="flex flex-wrap">
         <div class="hidden md:w-1/12 md:block">
-          <div class="w-12 rounded-full m-auto" :class="schoolColor(education.icon)">
-            <p class="text-center text-2xl font-semibold p-2">
-              {{ firstLetterSchoolName(education.school) }}
-            </p>
-          </div>
+          <img
+            :src="store.getFavicon(education.webAddress)"
+            :alt="education.school"
+            class="m-auto w-6"
+          />
         </div>
         <div class="w-12/12 md:w-11/12 pl-3">
           <h2 class="font-bold dark:text-slate-300">{{ education.title }}</h2>
           <div class="flex items-center gap-x-4 flex-wrap">
             <div class="flex">
               <School :width="15" :height="15" class="mt-1 mr-1 fill-slate-600" />
-              <p>{{ education.school }}</p>
+              <a :href="education.webAddress" target="_blank">{{ education.school }}</a>
             </div>
             <div class="flex">
               <Place :width="15" :height="15" class="mt-1 mr-1 fill-slate-600" />

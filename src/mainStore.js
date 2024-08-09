@@ -11,13 +11,13 @@ export const useStore = defineStore('mainStore', {
       companies: [
         {
           name: 'Flyscan',
-          period: 'Jan 2023 - Present',
+          period: 'Jan 2023 - Jub 2024',
           title: 'Front End Developer',
           type: 'Full Time',
-          icon: 'Flyscan',
           tasks:
             'Developed end-to-end complex features, from backend implementation to frontend integration, ensuring seamless functionality across the application. Proficient in conducting comprehensive testing to guarantee robustness and quality assurance.',
           place: 'Montreal, QC',
+          webAddress: 'https://flyscan.com',
           techStack: [
             'Vue',
             'Tailwind',
@@ -35,9 +35,9 @@ export const useStore = defineStore('mainStore', {
           period: 'JDec 2021 - Dec 2022',
           title: 'Front End Developer',
           type: 'Internship',
-          icon: 'Zmartests',
           tasks: 'Create new application using .Net and Blazor',
           place: 'Montreal, QC',
+          webAddress: 'https://zmartests.com',
           techStack: ['.Net', 'Blazor']
         },
         {
@@ -45,10 +45,10 @@ export const useStore = defineStore('mainStore', {
           period: 'Nov 2020 - May 2021',
           title: 'Front End Developer',
           type: 'Full Time',
-          icon: 'Nixa',
           tasks:
             'Create applications using: HTML, CSS, JavaScript, Python (Django), PHP (Symphony, WordPress), Ionic (with Angular)',
           place: 'Montreal, QC',
+          webAddress: 'https://nixa.ca',
           techStack: ['SASS', 'Bootstrap', 'Django', 'Symphony', 'Wordpress', 'Ionic', 'Angular']
         },
         {
@@ -56,10 +56,10 @@ export const useStore = defineStore('mainStore', {
           period: 'Jan 2020 - Nov 2020',
           title: 'Front End Developer',
           type: 'Full Time',
-          icon: 'Consoltec',
           tasks:
             'Create new functionalities, bugs fixed, make pages responsive and accessible. Technologies used: Angular JS, Bootstrap, Kendo UI.',
           place: 'Montreal, QC',
+          webAddress: 'https://consoltec.ca',
           techStack: ['Angular', 'Bootstrap', 'Kendo UI', 'JQuery']
         }
       ],
@@ -72,15 +72,6 @@ export const useStore = defineStore('mainStore', {
           gitHubLink: 'https://github.com/alexandru-constantin-hub/TicTacToe',
           status: 'Finished',
           techStack: ['React', 'Tailwind', 'Vite']
-        },
-        {
-          name: 'CMS',
-          description:
-            'The purpose of this project is to create a CMS flexible, modern and secured.',
-          date: 'May 2024',
-          gitHubLink: 'https://github.com/alexandru-constantin-hub/CMS',
-          status: 'In progress',
-          techStack: ['Laravel', 'Inertia JS', 'React', 'Tailwind', 'Docker', 'Pest']
         },
         {
           name: 'Resume',
@@ -169,7 +160,7 @@ export const useStore = defineStore('mainStore', {
           school: 'Cegep Gerald-Godin',
           type: 'AEC',
           date: '2021 - 2022',
-          icon: 'GeraldGodin',
+          webAddress: 'https://cgodin.qc.ca',
           place: 'Montreal, QC'
         },
         {
@@ -177,7 +168,7 @@ export const useStore = defineStore('mainStore', {
           school: 'Vanier College',
           type: 'AEC',
           date: '2019 - 2020',
-          icon: 'Vanier',
+          webAddress: 'https://vaniercollege.qc.ca',
           place: 'Montreal, QC'
         },
         {
@@ -185,7 +176,7 @@ export const useStore = defineStore('mainStore', {
           school: 'Alexandru Ioan Cuza University',
           type: 'Master',
           date: '2019 - 2020',
-          icon: 'AlexandruIoanCuza',
+          webAddress: 'https://uaic.ro',
           place: 'Iasi, Roumania'
         },
         {
@@ -193,7 +184,7 @@ export const useStore = defineStore('mainStore', {
           school: 'Alexandru Ioan Cuza University',
           type: 'Bachelor',
           date: '1992 - 1997',
-          icon: 'AlexandruIoanCuzaß',
+          webAddress: 'https://uaic.ro',
           place: 'Iasi, Roumania'
         }
       ]
@@ -226,6 +217,12 @@ export const useStore = defineStore('mainStore', {
         htmlClasses.add('dark')
       }
       return (this.currentTheme = currentTheme)
+    },
+    getFavicon(webAddress) {
+      if (!webAddress) {
+        return ''
+      }
+      return `https://www.google.com/s2/favicons?domain=${webAddress}&sz=256`
     }
   }
 })
