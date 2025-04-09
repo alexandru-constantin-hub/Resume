@@ -5,6 +5,7 @@ import Badge from '../components/Badge.vue'
 import Period from '../components/icons/Period.vue'
 import GitHub from '../components/icons/GitHub.vue'
 import { useStore } from '../mainStore'
+import BrowserChrome from '@/components/icons/BrowserChrome.vue'
 
 const store = useStore()
 </script>
@@ -23,6 +24,10 @@ const store = useStore()
         <div class="flex">
           <GitHub :width="15" :height="15" class="mt-1 mr-1 fill-slate-600" />
           <a :href="project.gitHubLink" target="_blank">The source code</a>
+        </div>
+        <div class="flex">
+          <BrowserChrome :width="15" :height="15" class="mt-1 mr-1 fill-slate-600" />
+          <a :href="project.projectLink" target="_blank">Link to project</a>
         </div>
       </div>
       <div class="my-2">

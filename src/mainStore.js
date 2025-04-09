@@ -69,7 +69,7 @@ export const useStore = defineStore('mainStore', {
           description:
             'Create a complex application that helps users to learn Excel. The project has three components: frontend and content- Gatsby js, backend for recording progress - Laravel. Also there an app made in Office Script that test users skills in Excel. I use Python for automating the process of creating content for the application.',
           date: 'June 2024',
-          gitHubLink: 'https://excelInsights.net',
+          projectLink: 'https://excelInsights.net',
           status: 'Finished as a project',
           techStack: [
             'Gatsby js',
