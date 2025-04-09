@@ -68,7 +68,7 @@ export const useStore = defineStore('mainStore', {
           name: 'Excel Insights',
           description:
             'Create a complex application that helps users to learn Excel. The project has three components: frontend and content- Gatsby js, backend for recording progress - Laravel. Also there an app made in Office Script that test users skills in Excel. I use Python for automating the process of creating content for the application.',
-          date: 'June 2024',
+          date: 'March 2025',
           projectLink: 'https://excelInsights.net',
           status: 'Finished as a project',
           techStack: [
@@ -132,7 +132,7 @@ export const useStore = defineStore('mainStore', {
           },
           React: {
             icon: 'react',
-            experience: 'one year of self learning'
+            experience: '> one year of experience'
           }
         },
         'Back End Frameworks': {

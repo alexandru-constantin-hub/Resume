@@ -21,11 +21,11 @@ const store = useStore()
           <Period :width="15" :height="15" class="mt-1 mr-1 fill-slate-600" />
           <p>{{ project.date }}</p>
         </div>
-        <div class="flex">
+        <div class="flex" v-if="project.gitHubLink">
           <GitHub :width="15" :height="15" class="mt-1 mr-1 fill-slate-600" />
           <a :href="project.gitHubLink" target="_blank">The source code</a>
         </div>
-        <div class="flex">
+        <div class="flex" v-if="project.projectLink">
           <BrowserChrome :width="15" :height="15" class="mt-1 mr-1 fill-slate-600" />
           <a :href="project.projectLink" target="_blank">Link to project</a>
         </div>
