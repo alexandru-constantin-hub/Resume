@@ -11,7 +11,7 @@ export const useStore = defineStore('mainStore', {
       companies: [
         {
           name: 'Flyscan',
-          period: 'Jan 2023 - Jub 2024',
+          period: 'Jan 2023 - Jul 2024',
           title: 'Front End Developer',
           type: 'Full Time',
           tasks:
@@ -70,7 +70,7 @@ export const useStore = defineStore('mainStore', {
             'Create a complex application that helps users to learn Excel. The project has three components: frontend and content- Gatsby js, backend for recording progress - Laravel. Also there an app made in Office Script that test users skills in Excel. I use Python for automating the process of creating content for the application.',
           date: 'March 2025',
           projectLink: 'https://excelInsights.net',
-          status: 'Finished as a project',
+          status: 'Deployed and live',
           techStack: [
             'Gatsby js',
             'React',
