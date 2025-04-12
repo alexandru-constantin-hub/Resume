@@ -66,8 +66,51 @@ export const useStore = defineStore('mainStore', {
       projects: [
         {
           name: 'Excel Insights',
-          description:
-            'Create a complex application that helps users to learn Excel. The project has three components: frontend and content- Gatsby js, backend for recording progress - Laravel. Also there an app made in Office Script that test users skills in Excel. I use Python for automating the process of creating content for the application.',
+          description: [
+            {
+              title: 'About ExcelInsights.net',
+              body: 'ExcelInsights.net is an educational platform designed to help users learn Microsoft Excel in a simple, structured, and interactive way.'
+            },
+            {
+              title: '🔍 Key Features',
+              list: [
+                "Clear explanations of Excel's main functionalities, organized by topics and subtopics.",
+                'Each page includes a feedback poll: “Useful” / “Not Useful” to gather user insights.',
+                'Easy-to-navigate layout with:',
+                [
+                  'A sidebar menu for quick access to main page sections.',
+                  '“Next / Previous” buttons for smooth topic-to-topic navigation.'
+                ],
+                'A personal dashboard where users can track their learning progress across all topics.'
+              ]
+            },
+            {
+              title: '🧩 Excel Add-in Integration',
+              list: [
+                'Custom-built Excel Add-in allows users to complete tasks related to each topic directly inside Excel.',
+                'After completing a task, users can click a "Check" button to verify and track completion.',
+                'Once all tasks in a topic are completed, progress can be saved and viewed on the ExcelInsights.net dashboard.',
+                'Promotes hands-on learning by combining web content with in-Excel practice.'
+              ]
+            }
+          ],
+          techStackDescription: [
+            {
+              section: 'Frontend',
+              description:
+                'Built using React with Gatsby.js for static site generation. Tailwind CSS is used for styling, and content is authored in MDX files, combining Markdown with JSX for flexibility.'
+            },
+            {
+              section: 'Backend',
+              description:
+                'A custom API built with Laravel (PHP) handles user progress tracking, feedback polling, and syncing with the Excel Add-in.'
+            },
+            {
+              section: 'Excel Add-In',
+              description:
+                'Developed with React and TypeScript, using Office Scripts. It allows users to complete tasks within Excel and sync their progress with the main web app.'
+            }
+          ],
           date: 'March 2025',
           projectLink: 'https://excelInsights.net',
           status: 'Deployed and live',
