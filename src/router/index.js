@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Projects from '../views/Projects.vue'
-import App from '@/App.vue'
+import Home from '../views/Home.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -8,7 +8,7 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: App,
+      component: Home,
       meta: {
         title: 'Resume',
         description: 'This is the resume of Alexandru Constantin'
@@ -27,16 +27,16 @@ const router = createRouter({
 })
 
 router.beforeEach((to) => {
-  ;(document.title = to.meta?.title ?? 'Resume Alexandru Constantin'),
-    document
-      .querySelector('meta[name="description"]')
-      ?.setAttribute('description', to.meta?.description ?? 'Resume Alexandru Constantin'),
-    document
-      .querySelector('meta[name="keywords"]')
-      ?.setAttribute(
-        'keywords',
-        to.meta?.description ?? 'Resume, Alexandru Constantin, Front End, Vue, Developer'
-      )
+  document.title = to.meta?.title ?? 'Resume Alexandru Constantin'
+  document
+    .querySelector('meta[name="description"]')
+    ?.setAttribute('content', to.meta?.description ?? 'Resume Alexandru Constantin')
+  document
+    .querySelector('meta[name="keywords"]')
+    ?.setAttribute(
+      'content',
+      to.meta?.keywords ?? 'Resume, Alexandru Constantin, Front End, Vue, Developer'
+    )
 })
 
 export default router
