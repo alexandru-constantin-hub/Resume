@@ -41,8 +41,10 @@ const store = useStore()
                 <p>{{ company.period }}</p>
               </div>
             </div>
-            <div class="my-2">
-              {{ company.tasks }}
+            <div class="my-4">
+              <p class="mb-2" v-for="(task, index) in company.tasks" :key="index">
+                {{ task }}
+              </p>
             </div>
             <div class="flex flex-wrap pt-2">
               <Badge

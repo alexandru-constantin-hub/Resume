@@ -10,12 +10,39 @@ export const useStore = defineStore('mainStore', {
       secondaryColor: 'text-slate-500',
       companies: [
         {
+          name: 'Self-employed',
+          period: 'Jul 2024 - present',
+          title: 'Front End Developer',
+          type: 'Full Time',
+          tasks: [
+            'Developed ExcelInsights.net, a unique platform combining structured web-based Excel education with an integrated Excel Add-In for in-app exercises and real-time progress tracking — a solution not currently offered by other platforms.',
+            'Designed and implemented the frontend using React, Gatsby.js, and Tailwind CSS.',
+            'Built a custom Excel Add-In in React/TypeScript with Office Scripts for task execution and progress tracking Developed a Laravel API to sync user feedback and learning progress.',
+            '💡 What makes it unique?',
+            'Unlike most Excel learning platforms, ExcelInsights.net combines structured web-based tutorials with a custom Excel Add-In. This Add-In allows users to complete interactive exercises directly inside Excel and sync progress with their online dashboard — a learning experience rarely offered elsewhere.'
+          ],
+          place: 'Montreal, QC',
+          webAddress: 'https://alexandruconstantin.ca',
+          techStack: [
+            'React',
+            'Tailwind',
+            'Laravel',
+            'Docker',
+            'Inertia.js',
+            'Pest',
+            'Dusk',
+            'Gatsby',
+            'Office Script'
+          ]
+        },
+        {
           name: 'Flyscan',
           period: 'Jan 2023 - Jul 2024',
           title: 'Front End Developer',
           type: 'Full Time',
-          tasks:
-            'Developed end-to-end complex features, from backend implementation to frontend integration, ensuring seamless functionality across the application. Proficient in conducting comprehensive testing to guarantee robustness and quality assurance.',
+          tasks: [
+            'Developed end-to-end complex features, from backend implementation to frontend integration, ensuring seamless functionality across the application. Proficient in conducting comprehensive testing to guarantee robustness and quality assurance.'
+          ],
           place: 'Montreal, QC',
           webAddress: 'https://flyscan.com',
           techStack: [
@@ -35,7 +62,7 @@ export const useStore = defineStore('mainStore', {
           period: 'JDec 2021 - Dec 2022',
           title: 'Front End Developer',
           type: 'Internship',
-          tasks: 'Create new application using .Net and Blazor',
+          tasks: ['Create new application using .Net and Blazor'],
           place: 'Montreal, QC',
           webAddress: 'https://zmartests.com',
           techStack: ['.Net', 'Blazor']
@@ -45,8 +72,9 @@ export const useStore = defineStore('mainStore', {
           period: 'Nov 2020 - May 2021',
           title: 'Front End Developer',
           type: 'Full Time',
-          tasks:
-            'Create applications using: HTML, CSS, JavaScript, Python (Django), PHP (Symphony, WordPress), Ionic (with Angular)',
+          tasks: [
+            'Create applications using: HTML, CSS, JavaScript, Python (Django), PHP (Symphony, WordPress), Ionic (with Angular)'
+          ],
           place: 'Montreal, QC',
           webAddress: 'https://nixa.ca',
           techStack: ['SASS', 'Bootstrap', 'Django', 'Symphony', 'Wordpress', 'Ionic', 'Angular']
@@ -56,8 +84,9 @@ export const useStore = defineStore('mainStore', {
           period: 'Jan 2020 - Nov 2020',
           title: 'Front End Developer',
           type: 'Full Time',
-          tasks:
-            'Create new functionalities, bugs fixed, make pages responsive and accessible. Technologies used: Angular JS, Bootstrap, Kendo UI.',
+          tasks: [
+            'Create new functionalities, bugs fixed, make pages responsive and accessible. Technologies used: Angular JS, Bootstrap, Kendo UI.'
+          ],
           place: 'Montreal, QC',
           webAddress: 'https://consoltec.ca',
           techStack: ['Angular', 'Bootstrap', 'Kendo UI', 'JQuery']
