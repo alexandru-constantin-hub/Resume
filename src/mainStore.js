@@ -69,28 +69,28 @@ export const useStore = defineStore('mainStore', {
           description: [
             {
               title: 'About ExcelInsights.net',
-              body: 'ExcelInsights.net is an educational platform designed to help users learn Microsoft Excel in a simple, structured, and interactive way.'
+              body: 'Unlike most Excel learning platforms, ExcelInsights.net combines structured web-based tutorials with a custom Excel Add-In. This Add-In allows users to complete interactive exercises directly inside Excel and sync progress with their online dashboard — a learning experience rarely offered elsewhere.'
             },
             {
               title: '🔍 Key Features',
               list: [
-                "Clear explanations of Excel's main functionalities, organized by topics and subtopics.",
-                'Each page includes a feedback poll: “Useful” / “Not Useful” to gather user insights.',
-                'Easy-to-navigate layout with:',
-                [
-                  'A sidebar menu for quick access to main page sections.',
-                  '“Next / Previous” buttons for smooth topic-to-topic navigation.'
-                ],
-                'A personal dashboard where users can track their learning progress across all topics.'
+                'Clear explanations of Excel functionalities, organized by topic and subtopic',
+                'Content search functionality to quickly locate topics or terms across the platform',
+                'Mobile-friendly design for seamless access on various devices',
+                'Dark mode support for comfortable reading in low-light environments',
+                'SEO-friendly architecture to improve visibility on search engines',
+                'Optimized image handling for fast-loading, high-quality screenshots',
+                'Interactive feedback poll ("Useful" / "Not Useful") on every page',
+                'Navigation via sidebar menu + “Next/Previous” buttons for smooth learning flow',
+                'Personal dashboard for tracking user progress'
               ]
             },
             {
               title: '🧩 Excel Add-in Integration',
               list: [
-                'Custom-built Excel Add-in allows users to complete tasks related to each topic directly inside Excel.',
-                'After completing a task, users can click a "Check" button to verify and track completion.',
-                'Once all tasks in a topic are completed, progress can be saved and viewed on the ExcelInsights.net dashboard.',
-                'Promotes hands-on learning by combining web content with in-Excel practice.'
+                'Developed a custom Excel Add-In (React, TypeScript, Office Scripts)',
+                'Users complete tasks directly in Excel, then click “Check” to track progress',
+                'Completion data syncs with the web platform’s dashboard via the API'
               ]
             }
           ],
